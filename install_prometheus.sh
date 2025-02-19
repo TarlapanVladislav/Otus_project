@@ -1,15 +1,24 @@
 #! /bin/bash
 
-apt update -y;
-
+# Установка prometheus
 apt install prometheus -y;
 
+# Копирования конфиг файла
 echo ./prometheus.yml > /etc/prometheus/prometheus.yml;
 
+# Запуск prometheus
 systemctl daemon-reload; systemctl start prometheus; systemctl enable prometheus;
 
-#sudo dpkg -i grafana_11.5.1_amd64.deb;
 
-#systemctl daemon-reload; systemctl start grafana-server;
+# Установка Grafana
+sudo apt-get install -y adduser libfontconfig1 musl;
 
-echo "прометеус установлен и запущен"
+wget https://dl.grafana.com/oss/release/grafana_11.5.1_amd64.deb;
+
+sudo dpkg -i grafana_11.5.1_amd64.deb;
+
+# Запуск Grafana
+systemctl daemon-reload; systemctl start grafana-server;
+
+
+echo "Прометеус и Графана установлены и запущены"
