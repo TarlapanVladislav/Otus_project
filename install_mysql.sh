@@ -10,7 +10,7 @@ apt install mysql-server-8.0 -y;
 systemctl start mysql;
 
 # Переносим конфиг файл
-cat ./mysqld.conf > /etc/mysql/mysql.conf.d/mysqld.cnf;
+cat ./mysqld.cnf > /etc/mysql/mysql.conf.d/mysqld.cnf;
 
 # Создаем пользователя для реплики
 mysql --user=root --password=Testpass1$ --skip-column-names -e "CREATE USER repl@'%' IDENTIFIED WITH 'caching_sha2_password' BY 'oTUSlave#2020'";
