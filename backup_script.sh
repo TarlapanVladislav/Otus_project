@@ -2,7 +2,7 @@
 
 MYSQL='mysql --user=root --password=Testpass1$ --skip-column-names'
 
-DIR='/home/user/Otus_project/backupsql/'
+DIR='/mnt/'
 
 for s in mysql `$MYSQL -e "SHOW DATABASES LIKE '%%'"`;
         do
