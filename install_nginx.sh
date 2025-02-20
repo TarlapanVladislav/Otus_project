@@ -16,9 +16,9 @@ systemctl restart filebeat;
 
 echo "filebeat настроен";
 
-apt install node_exporter -y;
+apt install prometheus-node-exporter -y;
 
-systemctl daemon-reload; systemctl start node_exporter; systemctl enable node_exporter;
+systemctl daemon-reload; systemctl start prometheus-node-exporter; systemctl enable prometheus-node-exporter;
 
 echo "node_exporter установлен и запущен"
 
