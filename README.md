@@ -10,11 +10,9 @@
   git checkout --track $branch
 done
 
-4. Установить заранее Prometheus и Grafana; ELK
+4. Поменять ip в файле реплики sql
 
-Поменять ip в файле реплики sql
+   ELK поменять имя сервера в конфиг файле elasticksearch, поменять Ip в filebeat
 
-ELK поменять имя сервера в конфиг файле elasticksearch, поменять Ip в filebeat
-
-Nginx и Apache поменять Ip в конфиг файлах сайтов
-
+   Nginx и Apache поменять Ip в конфиг файлах сайтов
+   
