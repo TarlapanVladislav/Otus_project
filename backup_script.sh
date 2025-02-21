@@ -10,6 +10,6 @@ for s in mysql `$MYSQL -e "SHOW DATABASES LIKE '%%'"`;
                 for TABLE in $TABLES
                 do
         mkdir -p $DIR/$s;
-        mysqldump --user=root --password=Testpass1$ --add-drop-table --add-locks --create-options --disable-keys --extended-insert --single-transaction --set-gtid-purged --quick --set-charset --events --routines --triggers $s $TABLE | gzip -1 > $DIR/$s/$TABLE.gz;
+        mysqldump --user=root --password=Testpass1$ --add-drop-table --add-locks --create-options --disable-keys --extended-insert --single-transaction --set-gtid-purged=OFF --quick --set-charset --events --routines --triggers $s $TABLE | gzip -1 > $DIR/$s/$TABLE.gz;
                 done
         done
